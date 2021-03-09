@@ -1,0 +1,19 @@
+package:
+  name: raven
+  version: 0.1
+
+source:
+  url: https://github.com/CSHS-CWRA/raven-feedstock/raw/main/src/Raven-rev288.zip
+  #path: ../Raven-rev288
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - make  # [not win]
+  host:
+    - libnetcdf
+  run:
+    - libnetcdf
+
+build:
+  build: 0
