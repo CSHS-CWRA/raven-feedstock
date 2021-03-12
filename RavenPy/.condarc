@@ -1,0 +1,5 @@
+ssl_verify: False
+channels:
+  - cjauvin
+  - conda-forge
+  - defaults
