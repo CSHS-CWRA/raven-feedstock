@@ -3,7 +3,7 @@ package:
   version: 0.1
 
 source:
-  url: https://github.com/CSHS-CWRA/raven-feedstock/raw/main/src/Raven-rev288.zip
+  url: https://github.com/Zeitsperre/raven-feedstock/raw/add_ravenpy/raven/src/Raven-rev288.zip
   #path: ../Raven-rev288
 
 requirements:
