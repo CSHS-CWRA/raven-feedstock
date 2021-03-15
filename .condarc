@@ -1,5 +1,6 @@
 ssl_verify: False
 channels:
+  - zeitsperre
   - cjauvin
   - conda-forge
   - defaults
