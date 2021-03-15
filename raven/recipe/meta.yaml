@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/Zeitsperre/raven-feedstock/raw/add_ravenpy/raven/src/Raven-rev288.zip
+  url: https://github.com/CSHS-CWRA/raven-feedstock/raw/main/raven/src/Raven-rev288.zip
   #path: ../Raven-rev288
 
 build:
