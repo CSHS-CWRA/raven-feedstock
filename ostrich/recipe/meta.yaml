@@ -1,0 +1,32 @@
+{% set version = "0.1.0" %}
+
+package:
+  name: ostrich
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/usbr/ostrich.git
+  # If not set to tagged commit, will pull from master. caveat emptor.
+  # git_rev: v17.12.19
+
+build:
+  build: 0
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - make  # [not win]
+
+about:
+  home: https://www.civil.uwaterloo.ca/envmodelling/Ostrich.html
+  dev_url: https://github.com/usbr/ostrich
+  docs_url: https://usbr.github.io/ostrich/
+  doc_source_url: https://github.com/usbr/ostrich/tree/master/docs
+  license: GPL-2.0-only
+  license_file: LICENSE
+  summary: This is an experimental conda binary for the Ostrich model calibration tool.
+
+extra:
+  maintainers:
+    - Zeitsperre
+    - cjauvin

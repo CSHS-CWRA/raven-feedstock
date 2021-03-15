@@ -1,0 +1,63 @@
+{% set version = "0.3.0" %}
+
+package:
+  name: ravenpy
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/CSHS-CWRA/RavenPy.git
+  git_rev: v0.3.0
+
+build:
+  # noarch: python
+  skip: true  # [win]
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - pip
+  run:
+    # I don't know if :: syntax does anything here. Can only be specified in conda-build command.
+    - zeitsperre::raven
+    - zeitsperre::ostrich
+    - python
+    - affine
+    - click
+    - climpred >=2.1
+    - clisops >=0.5.1
+    - gdal >=3.0.0
+    - geopandas >=0.9.0
+    - lxml
+    - matplotlib
+    - numpy >=1.20
+    - owslib
+    - pandas >=1.2
+    - pyproj >=3.0.0
+    - rasterio
+    - requests
+    - rioxarray
+    - scipy
+    - shapely
+    - statsmodels
+    - xarray >=0.17
+    - xclim >=0.23
+    - xskillscore
+
+test:
+  imports:
+    - ravenpy
+
+about:
+  home: https://github.com/CSHS-CWRA/RavenPy
+  dev_url: https://github.com/CSHS-CWRA/RavenPy
+  doc_url: https://ravenpy.readthedocs.io/en/latest/
+  license: MIT
+  license_file: LICENSE
+  summary: This is an experimental conda binary for the RavenPy python library.
+
+extra:
+  maintainers:
+    - Zeitsperre
