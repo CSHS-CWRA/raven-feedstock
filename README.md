@@ -1,2 +1,7 @@
 # raven-feedstock
-Feedstock for Raven
+Conda-build recipes for Raven, Ostrich, and RavenPy.
+
+### Contributors
+
+* Christian Jauvin
+* Trevor James Smith
