@@ -20,8 +20,9 @@ requirements:
     - setuptools
     - pip
   run:
-    - cjauvin::raven # I don't know if :: syntax does anything here
-#    - cjauvin::ostrich # binary dep, only in cjauvin channel
+    # I don't know if :: syntax does anything here. Can only be specified in conda-build command.
+    - zeitsperre::raven
+    - zeitsperre::ostrich
     - python
     - affine
     - click

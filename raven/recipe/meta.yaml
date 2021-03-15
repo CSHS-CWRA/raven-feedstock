@@ -1,10 +1,15 @@
+{% set version = "0.1.0" %}
+
 package:
   name: raven
-  version: 0.1
+  version: {{ version }}
 
 source:
   url: https://github.com/Zeitsperre/raven-feedstock/raw/add_ravenpy/raven/src/Raven-rev288.zip
   #path: ../Raven-rev288
+
+build:
+  build: 0
 
 requirements:
   build:
@@ -15,5 +20,16 @@ requirements:
   run:
     - libnetcdf
 
-build:
-  build: 0
+about:
+  home: http://raven.uwaterloo.ca/
+  dev_url: https://chyms.nrc.gc.ca/
+  docs_url: http://raven.uwaterloo.ca/files/v3.0.4/RavenManual_v3.0.4.pdf
+  doc_source_url: http://raven.uwaterloo.ca/Downloads.html
+  license: Artistic-2.0
+  license_file: LICENSE
+  summary: This is an experimental conda binary for the Raven hydrological model.
+
+extra:
+  maintainers:
+    - Zeitsperre
+    - cjauvin

@@ -9,6 +9,9 @@ source:
   # If not set to tagged commit, will pull from master. caveat emptor.
   # git_rev: v17.12.19
 
+build:
+  build: 0
+
 requirements:
   build:
     - {{ compiler('cxx') }}
