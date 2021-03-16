@@ -1,12 +1,13 @@
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: raven
   version: {{ version }}
 
 source:
-  url: https://github.com/CSHS-CWRA/raven-feedstock/raw/main/raven/src/Raven-rev288.zip
-  #path: ../Raven-rev288
+  url: http://www.civil.uwaterloo.ca/jmai/raven/Raven-rev312.zip
+  # git_url:
+  # git_rev:
 
 build:
   build: 0
@@ -16,9 +17,9 @@ requirements:
     - {{ compiler('cxx') }}
     - make  # [not win]
   host:
-    - libnetcdf =4.7.3
+    - libnetcdf <=4.7.3
   run:
-    - libnetcdf =4.7.3
+    - libnetcdf <=4.7.3
 
 about:
   home: http://raven.uwaterloo.ca/
