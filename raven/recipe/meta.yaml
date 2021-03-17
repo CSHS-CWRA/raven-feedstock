@@ -11,9 +11,9 @@ source:
 
 build:
   noarch: generic
-  run_exports:
-    strong:
-      - libnetcdf
+#  run_exports:
+#    strong:
+#      - libnetcdf
 
 requirements:
   build:
