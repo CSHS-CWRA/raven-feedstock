@@ -24,13 +24,14 @@ requirements:
     # I don't know if :: syntax does anything here. Can only be specified in conda-build command.
     - zeitsperre::raven
     - zeitsperre::ostrich
-    - python >=3.7
+    - python >=3.7,<=3.9
     - affine
     - click
     - climpred >=2.1
     - clisops >=0.5.1
     - gdal >=3
     - geopandas >=0.9
+    - libnetcdf
     - lxml
     - matplotlib
     - numpy >=1.20
@@ -43,7 +44,7 @@ requirements:
     - scipy
     - shapely
     - statsmodels
-    - xarray >=0.17
+    - xarray >=0.16.1
     - xclim >=0.23
     - xskillscore
 
