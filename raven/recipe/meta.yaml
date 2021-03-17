@@ -10,16 +10,19 @@ source:
   # git_rev:
 
 build:
-  build: 0
+  noarch: generic
+  run_exports:
+    strong:
+      - libnetcdf
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - make  # [not win]
   host:
-    - libnetcdf <=4.7.3
+    - libnetcdf
   run:
-    - libnetcdf <=4.7.3
+    - libnetcdf
 
 about:
   home: http://raven.uwaterloo.ca/
