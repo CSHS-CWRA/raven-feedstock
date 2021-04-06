@@ -22,7 +22,8 @@ requirements:
   build:
     - python
     - setuptools
-    - pip
+    - gdal >=3
+    - pip <20
   run:
     # I don't know if :: syntax does anything here. Can only be specified in conda-build command.
     - zeitsperre::raven
