@@ -1,13 +1,16 @@
-{% set version = "0.3.0" %}
+{% set name = "ravenpy" %}
+{% set version = "0.3.1" %}
 
 package:
-  name: ravenpy
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: ac8b238dc9aea59101412b2ede7ac91562c3765d62f70df809a9a96f3afb5765
   # If not set to tagged commit, will pull from master. caveat emptor.
-  git_url: https://github.com/CSHS-CWRA/RavenPy.git
-  git_rev: v0.3.0
+  # git_url: https://github.com/CSHS-CWRA/RavenPy.git
+  # git_rev: v0.3.1
 
 build:
   # noarch: python
@@ -29,6 +32,7 @@ requirements:
     - click
     - climpred >=2.1
     - clisops >=0.5.1
+    - dask <=2021.02.0
     - gdal >=3
     - geopandas >=0.9
     - libnetcdf
@@ -46,7 +50,7 @@ requirements:
     - statsmodels
     - xarray >=0.16.1
     - xclim >=0.23
-    - xskillscore
+    - xskillscore <=0.0.19
 
 test:
   imports:
