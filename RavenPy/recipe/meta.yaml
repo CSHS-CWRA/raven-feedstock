@@ -20,7 +20,7 @@ build:
 
 requirements:
   build:
-    - python
+    - python >=3.7
     - setuptools
     - gdal >=3
     - pip <20
@@ -28,7 +28,7 @@ requirements:
     # I don't know if :: syntax does anything here. Can only be specified in conda-build command.
     - zeitsperre::raven
     - zeitsperre::ostrich
-    - python >=3.7,<3.10
+    - python >=3.7
     - affine
     - click
     - climpred >=2.1
