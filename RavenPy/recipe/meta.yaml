@@ -1,5 +1,5 @@
 {% set name = "ravenpy" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ac8b238dc9aea59101412b2ede7ac91562c3765d62f70df809a9a96f3afb5765
+  sha256: a4eb054bded6a990783c3ea1d52263779c7083b0fa5e0e9df0ba8174c9101890
   # If not set to tagged commit, will pull from master. caveat emptor.
   # git_url: https://github.com/CSHS-CWRA/RavenPy.git
-  # git_rev: v0.3.1
+  # git_rev: v0.4.0
 
 build:
   # noarch: python
@@ -23,7 +23,7 @@ requirements:
     - python
     - setuptools
     - gdal >=3
-    - pip <20
+    - pip
   run:
     # I don't know if :: syntax does anything here. Can only be specified in conda-build command.
     - zeitsperre::raven
@@ -32,7 +32,7 @@ requirements:
     - affine
     - click
     - climpred >=2.1
-    - clisops >=0.5.1
+    - clisops >=0.6.3
     - dask <=2021.02.0
     - gdal >=3
     - geopandas >=0.9
@@ -49,7 +49,7 @@ requirements:
     - scipy
     - shapely
     - statsmodels
-    - xarray >=0.16.1
+    - xarray >=0.17
     - xclim >=0.23
     - xskillscore <=0.0.19
 
