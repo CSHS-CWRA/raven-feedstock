@@ -1,12 +1,13 @@
+{% set name = "Raven" %}
 {% set version = "3.0.4" %}
 {% set revision = "318" %}
 
 package:
-  name: raven
+  name: {{ name|lower }}
   version: {{ version }}.{{ revision }}
 
 source:
-  url: http://www.civil.uwaterloo.ca/jmai/raven/Raven-rev{{ revision }}.zip
+  url: http://www.civil.uwaterloo.ca/jmai/{{ name|lower }}/{{ name }}-rev{{ revision }}.zip
   # git_url:
   # git_rev:
 
@@ -25,7 +26,7 @@ requirements:
 about:
   home: http://raven.uwaterloo.ca/
   dev_url: https://chyms.nrc.gc.ca/
-  docs_url: http://raven.uwaterloo.ca/files/v3.0.4/RavenManual_v3.0.4.pdf
+  docs_url: http://raven.uwaterloo.ca/files/v{{ version }}/RavenManual_v{{ version }}.pdf
   doc_source_url: http://raven.uwaterloo.ca/Downloads.html
   license: Artistic-2.0
   license_file: LICENSE
