@@ -16,7 +16,7 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - make  # [not win]
-    - libenetcdf
+    - libnetcdf
   host:
     - libnetcdf
   run:
