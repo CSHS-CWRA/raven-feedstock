@@ -12,16 +12,16 @@ source:
   # git_rev:
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - make  # [not win]
   host:
-    - libnetcdf <=4.8.0
+    - libnetcdf
   run:
-    - libnetcdf <=4.8.0
+    - libnetcdf
 
 about:
   home: http://raven.uwaterloo.ca/
