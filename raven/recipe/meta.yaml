@@ -1,11 +1,12 @@
-{% set version = "0.1.3" %}
+{% set version = "3.0.4" %}
+{% set revision = "318" %}
 
 package:
   name: raven
-  version: {{ version }}
+  version: {{ version }}.{{ revision }}
 
 source:
-  url: http://www.civil.uwaterloo.ca/jmai/raven/Raven-rev318.zip
+  url: http://www.civil.uwaterloo.ca/jmai/raven/Raven-rev{{ revision }}.zip
   # git_url:
   # git_rev:
 
@@ -16,11 +17,10 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - make  # [not win]
-    - libnetcdf
   host:
-    - libnetcdf
+    - libnetcdf <=4.8.0
   run:
-    - libnetcdf
+    - libnetcdf <=4.8.0
 
 about:
   home: http://raven.uwaterloo.ca/
