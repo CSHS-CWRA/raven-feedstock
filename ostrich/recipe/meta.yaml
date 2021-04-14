@@ -1,4 +1,4 @@
-{% set version = "0.1.2" %}
+{% set version = "21.03.16" %}
 
 package:
   name: ostrich
@@ -7,7 +7,7 @@ package:
 source:
   # If not set to tagged commit, will pull from master. caveat emptor.
   git_url: https://github.com/usbr/ostrich.git
-  git_rev: v21.03.16
+  git_rev: v{{ version }}
 
 build:
   build: 0
