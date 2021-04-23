@@ -1,6 +1,6 @@
 {% set name = "Raven" %}
 {% set version = "3.0.4" %}
-{% set revision = "318" %}
+{% set revision = "322" %}
 
 package:
   name: {{ name|lower }}
@@ -8,26 +8,31 @@ package:
 
 source:
   url: http://www.civil.uwaterloo.ca/jmai/{{ name|lower }}/{{ name }}-rev{{ revision }}.zip
-  # git_url:
-  # git_rev:
+  sha256: 96513a51db42c81875347fc4d56cb323ec7feab71a9c4b7f8b03d2144552e582
 
 build:
-  number: 2
+  number: 0
+  skip: true  # [not linux]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - make  # [not win]
-    - libnetcdf
+    - make
+    - libnetcdf  {{ libnetcdf }}
   host:
-    - libnetcdf
+    - libnetcdf  {{ libnetcdf }}
   run:
-    - libnetcdf
+    - libnetcdf  {{ libnetcdf }}
+
+test:
+  commands:
+    - test -f $PREFIX/bin/raven
+    - raven -v
 
 about:
   home: http://raven.uwaterloo.ca/
   dev_url: https://chyms.nrc.gc.ca/
-  docs_url: http://raven.uwaterloo.ca/files/v{{ version }}/RavenManual_v{{ version }}.pdf
+  doc_url: http://raven.uwaterloo.ca/files/v{{ version }}/RavenManual_v{{ version }}.pdf
   doc_source_url: http://raven.uwaterloo.ca/Downloads.html
   license: Artistic-2.0
   license_file: LICENSE
